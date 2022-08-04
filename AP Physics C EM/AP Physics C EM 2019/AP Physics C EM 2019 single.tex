@@ -1,0 +1,44 @@
+\documentclass[12pt]{exam}
+\usepackage{humbleconfig}
+\usepackage{humble}
+
+\begin{document}
+    \begin{titlepage}
+        \vspace*{2cm}
+        \par\noindent\rule{0.75\textwidth}{5pt}
+        \vspace*{2em}
+        \par\noindent\parbox{\textwidth}{
+            \fontencoding{T1}\fontfamily{bch}\selectfont%
+            \Huge{\textbf{\subject}}
+            
+            \vspace{0.2em}
+            \LARGE{\textbf{\papername}}
+        }
+        \vfill
+        \Huge{\textsf{\textbf{Humble}Academy\\\textbf{航铂教育}}}
+    \end{titlepage}
+
+    \thispagestyle{empty}
+    \mbox{}
+    \vfill
+
+    \textsf{\textbf{Humble}Academy\\\textbf{航铂教育}}
+
+    专业国际课程辅导\\
+    AP、IB、A Level、OSSD、国际学科竞赛、学术拓展训练
+
+    \begin{description}
+        \item[南京校区] 秦淮区中山南路1号 南京中心47楼
+        % \item[苏州校区] 秦淮区中山南路1号 南京中心47楼
+    \end{description}
+
+    \clearpage
+    \section{\mcqTitle}
+    \mcqPreamble
+
+    \clearpage
+    \foreach \id in \mcq {
+        \input{mcq/mcq-\id.tex}
+        \clearpage
+    }
+\end{document}

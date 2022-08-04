@@ -1,0 +1,66 @@
+\usepackage[a4paper, twoside, total={7in, 9.5in}]{geometry}
+
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp, fontspec, xltxtra, xunicode}
+\usepackage[slantfont, boldfont]{xeCJK}
+    \setCJKmainfont[%
+        BoldFont=Source Han Serif TC Bold,%
+        ItalicFont=Kaiti TC,%
+    ]{Source Han Serif TC}
+    \setCJKsansfont[%
+        BoldFont=Source Han Sans TC Bold,%
+    ]{Source Han Sans TC}
+    \setCJKmonofont{Source Han Serif TC}
+    \setsansfont{Source Han Sans TC}
+    % \setmainfont{IBM Plex Serif Light}
+    % \setmonofont{IBM Plex Mono}
+
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{booktabs, multirow, multicol, caption, graphicx}
+\usepackage{pgffor, xfp}
+\usepackage{hyperref, url}
+\usepackage{adjustbox}
+\usepackage{tabto}
+\usepackage{emptypage, lastpage}
+\usepackage{lipsum}
+\usepackage{float}
+
+\usepackage{xpatch}
+    \xpatchcmd{\oneparchoices}%
+        {\penalty -50\hskip 1em plus 1em\relax}{\hfill}{}{}
+    \xpatchcmd{\oneparchoices}%
+        {\penalty -50\hskip 1em plus 1em\relax}{\hfill}{}{}
+
+\usepackage{enumitem, pifont}
+    \setlist[enumerate,1]{label={\Roman*.}}
+    \setenumerate{itemsep=3pt, topsep=3pt}
+    % \renewcommand{\labelitemi}{\ding{113}}
+    % \renewcommand{\labelitemii}{\ding{108}}
+
+% Format settings
+\renewcommand\choicelabel{(\thechoice)}
+\renewcommand{\questionshook}{\setlength{\leftmargin}{30pt}}
+\renewcommand{\choiceshook}{\setlength{\leftmargin}{22pt}}
+\renewcommand{\thesection}{\Roman{section}} 
+\renewcommand{\thesubsection}{\thesection-\Alph{subsection}}
+% \renewcommand{\questionlabel}{\boxed{\thequestion}}
+\setlength\parindent{0pt}
+\setlength{\parskip}{\baselineskip}
+
+% Headers and footers
+\headrule
+\lhead{\textsf{\textbf{Humble}Academy\\\textbf{航铂教育}}}
+\rhead{\fontencoding{T1}\fontfamily{bch}\selectfont\subject\\\papername}
+
+% custom commands
+\newcommand{\ap}{AP\textsuperscript{\Large\textregistered}}
+\newcommand{\unit}[1]{\mathop{}\!\mathrm{#1}}
+\newcommand{\latinunit}[1]{\mathop{}\!#1}
+\newcommand{\diff}{\mathop{}\!\mathrm{d}}
+\newcommand{\tightcdot}{\!\cdot\!}
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\pbrace}[1]{\left(#1\right)}
+\newcommand{\bbrace}[1]{\left[#1\right]}
+\newcommand{\cbrace}[1]{\left{#1\right}}
+\newcommand{\vdef}[2]{$\overset{\text{#2}}{\mbox{\textbf{#1}}}$}
+\newcommand{\hdef}[2]{\,\textbf{#1} (#2)\,}
